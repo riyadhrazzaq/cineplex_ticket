@@ -1,0 +1,45 @@
+> create login page ----------------------------------done
+> add menu window-------------------------------------done
+> add movies show time---------------------------nope
+> add movies price list-------------------------------done
+> add buy ticket
+	>select movie --------------------------------done
+		>using dropdown menu------------------done
+
+	>select time----------------------------------done
+		>>using dropdown menu-----------------done
+
+	>select number of seats-----------------------done
+		>delete no. seats from total seats
+	>calculate price
+	>add cancel or checkout
+	>add animation upon checking out
+>add signup
+	>check crosscheck username--------------------done
+>mod operation:
+	>update showtime and movies
+	>reset seats
+
+
+
+cost design()
+{
+	int cost;
+        String s,t;
+        s=String.valueOf(seatbox.getSelectedItem());
+        t=buttonGroup1.getSelection().getActionCommand();
+        if(t.equals("Regular")) cost=Integer.parseInt(s)*300;
+        else cost=Integer.parseInt(s)*350;
+
+        costshow.setText("Total Cost: BDT "+cost);
+}
+
+  String no=(String) seatbox.getSelectedItem();
+       String t;
+       int cost;
+       
+       t=buttonGroup1.getSelection().getActionCommand();
+        if(t.equals("Regular")) cost=Integer.parseInt(no)*300;
+        else cost=Integer.parseInt(no)*350;
+       
+        System.out.println(cost);
